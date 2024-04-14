@@ -12,7 +12,7 @@ import jakarta.servlet.http.Part;
 import java.io.IOException;
 
 // https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Java-File-Upload-Servlet-Ajax-Example
-@WebServlet(name = "FileUploadServlet", urlPatterns = {"/fileuploadservlet"})
+@WebServlet(name = "FileUploadServlet", urlPatterns = {"/upload"})
 // 由容器去具体实现，比如tomcat，jboss等.
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024 * 1, // 1 MB
