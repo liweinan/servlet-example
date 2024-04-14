@@ -26,10 +26,11 @@ public class FileUploadServlet extends HttpServlet {
         /* Receive file uploaded to the Servlet from the HTML5 form */
         Part filePart = request.getPart("file");
         String fileName = filePart.getSubmittedFileName();
+        String filePath = "/tmp/" + fileName;
         for (Part part : request.getParts()) {
-            part.write("/tmp/" + fileName);
+            part.write(filePath);
         }
-        response.getWriter().print("The file uploaded sucessfully.");
+        response.getWriter().print("The file uploaded sucessfully: " + filePath);
     }
 
 }
